@@ -93,6 +93,8 @@ architecture rtl of processorRV is
     );
   end component Imm_Gen;
 
+ ----SEÑALES-----
+
   signal Alu_Op1      : std_logic_vector(31 downto 0);
   signal Alu_Op2      : std_logic_vector(31 downto 0);
   signal Alu_ZERO     : std_logic;
@@ -106,18 +108,18 @@ architecture rtl of processorRV is
   signal PC_plus4       : std_logic_vector(31 downto 0);
 
   signal Instruction    : std_logic_vector(31 downto 0); -- La instrucción desde lamem de instr
-  signal Imm_ext        : std_logic_vector(31 downto 0); -- La parte baja de la instrucción extendida de signo
+  --signal Imm_ext        : std_logic_vector(31 downto 0); -- La parte baja de la instrucción extendida de signo
   signal reg_RS1        : std_logic_vector(31 downto 0);
   signal reg_RS2        : std_logic_vector(31 downto 0);
 
   signal dataIn_Mem     : std_logic_vector(31 downto 0); -- Dato desde memoria
   signal Addr_BranchJal : std_logic_vector(31 downto 0);
 
-  signal Ctrl_Jal, Ctrl_Jalr, Ctrl_Branch, Ctrl_MemWrite, Ctrl_MemRead,  Ctrl_ALUSrc, Ctrl_RegWrite : std_logic;
+  --signal Ctrl_Jal, Ctrl_Jalr, Ctrl_Branch, Ctrl_MemWrite, Ctrl_MemRead,  Ctrl_ALUSrc, Ctrl_RegWrite : std_logic;
   
-  signal Ctrl_ALUOp     : std_logic_vector(2 downto 0);
-  signal Ctrl_PcLui     : std_logic_vector(1 downto 0);
-  signal Ctrl_ResSrc    : std_logic_vector(1 downto 0);
+  --signal Ctrl_ALUOp     : std_logic_vector(2 downto 0);
+  --signal Ctrl_PcLui     : std_logic_vector(1 downto 0);
+  --signal Ctrl_ResSrc    : std_logic_vector(1 downto 0);
 
   signal Addr_Jalr      : std_logic_vector(31 downto 0);
   signal Addr_Jump_dest : std_logic_vector(31 downto 0);
@@ -127,6 +129,29 @@ architecture rtl of processorRV is
   signal Funct3         : std_logic_vector(2 downto 0);
   signal Funct7         : std_logic_vector(6 downto 0);
   signal RS1, RS2, RD   : std_logic_vector(4 downto 0);
+
+  --IF/ID
+  signal PC_IF : std_logic_vector(31 downto 0);
+  signal PC_ID : std_logic_vector(31 downto 0);
+  signal Instruction_IF : std_logic_vector(31 downto 0);
+  signal Instruction_ID : std_logic_vector(31 downto 0);
+
+  --ID/EX
+  signal Imm_ext_ID      : std_logic_vector(31 downto 0); -- La parte baja de la instrucción extendida de signo
+  signal Imm_ext_EX      : std_logic_vector(31 downto 0); -- La parte baja de la instrucción extendida de signo
+  signal PC_EX           : std_logic_vector(31 downto 0);
+  signal Ctrl_Jal, Ctrl_Jalr, Ctrl_Branch, Ctrl_MemWrite, Ctrl_MemRead,  Ctrl_ALUSrc, Ctrl_RegWrite : std_logic;
+  signal Ctrl_Jal_EX, Ctrl_Jalr_EX, Ctrl_Branch_EX, Ctrl_MemWrite_EX, Ctrl_MemRead_EX,  Ctrl_ALUSrc_EX, Ctrl_RegWrite_EX : std_logic;
+  signal Ctrl_ALUOp     : std_logic_vector(2 downto 0);
+  signal Ctrl_PcLui     : std_logic_vector(1 downto 0);
+  signal Ctrl_ResSrc    : std_logic_vector(1 downto 0);
+  signal Ctrl_ALUOp_EX     : std_logic_vector(2 downto 0);
+  signal Ctrl_PcLui_EX     : std_logic_vector(1 downto 0);
+  signal Ctrl_ResSrc_EX    : std_logic_vector(1 downto 0);
+  signal Funct3_EX         : std_logic_vector(2 downto 0);
+  signal Funct7_EX         : std_logic_vector(6 downto 0);
+  signal reg_RS1, reg_RS2   : std_logic_vector(31 downto 0);
+  signal reg_RS1_EX, reg_RS2_EX   : std_logic_vector(31 downto 0);
 
 
 begin

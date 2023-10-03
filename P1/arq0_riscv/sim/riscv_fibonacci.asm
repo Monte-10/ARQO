@@ -13,14 +13,14 @@ space:     .string " "
 .text
 main:        lw    t0, argument     # n = 8
              jal   printHeader      # imprime string
-             
+    
              xor   t2, t2, t2       # t1 indice posici�n
              la    t1, fib_seq      # apuntador a seq fib mem datos
              sw    t2, (t1)         # fib[0] = 0
              addi  t2, t2, 1
              sw    t2, 4(t1)        # fib[1] = 2
              addi  t1, t1, 4        # t1 apunta a fib[1]
-                     
+
 f_loop:      addi  t1, t1, 4        # t1 apunta a fib[n+1]    
              addi  t2, t2, 1        # indice de iteraci�n
              lw    t3, -8(t1)       # load fib[n-2]
