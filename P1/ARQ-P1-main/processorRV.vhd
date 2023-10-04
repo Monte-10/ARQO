@@ -98,7 +98,7 @@ architecture rtl of processorRV is
   signal Alu_Op1_EX      : std_logic_vector(31 downto 0);
   signal Alu_Op2_EX      : std_logic_vector(31 downto 0);
   signal Alu_ZERO_EX     : std_logic;
-  signal Alu_SIGN_EX      : std_logic;
+  signal Alu_SIGN_EX     : std_logic;
   signal AluControl_EX   : std_logic_vector(3 downto 0);
   signal reg_RD_data_WB  : std_logic_vector(31 downto 0);
 
@@ -156,9 +156,9 @@ architecture rtl of processorRV is
   signal Funct3_MEM : std_logic_vector(2 downto 0);
   signal RD_MEM   : std_logic_vector(4 downto 0);
   signal reg_RT_MEM : std_logic_vector(31 downto 0);
-  signal  Alu_Res_MEM        : std_logic_vector(31 downto 0);
-  signal Alu_ZERO_MEM    : std_logic;
-  signal Alu_SIGN_MEM      : std_logic;
+  signal Alu_Res_MEM : std_logic_vector(31 downto 0);
+  signal Alu_ZERO_MEM : std_logic;
+  signal Alu_SIGN_MEM : std_logic;
   signal enable_EX_MEM: std_logic;
   signal Ctrl_ResSrc_MEM: std_logic_vector(1 downto 0);
 
@@ -166,7 +166,7 @@ architecture rtl of processorRV is
   signal RD_WB   : std_logic_vector(4 downto 0);
   signal Ctrl_RegWrite_WB: std_logic;
   signal Ctrl_ResSrc_WB: std_logic_vector(1 downto 0);
-  signal  Alu_Res_WB        : std_logic_vector(31 downto 0);
+  signal Alu_Res_WB : std_logic_vector(31 downto 0);
   signal dataIn_WB     : std_logic_vector(31 downto 0); -- From Data Memory
   signal enable_MEM_WB: std_logic;
 
@@ -180,18 +180,17 @@ architecture rtl of processorRV is
 
   --hazard detection unit 
   signal Ctrl_mux_hazard: std_logic;
-
   signal Ctrl_Branch_MUX : std_logic;
   signal Ctrl_ResSrc_MUX : std_logic_vector(1 downto 0);
-  signal Ctrl_MemWrite_MUX: std_logic; 
-  signal Ctrl_MemRead_MUX: std_logic;
-  signal Ctrl_PcLui_MUX: std_logic_vector(1 downto 0);
-  signal Ctrl_jalr_MUX: std_logic; 
-  signal Ctrl_RegWrite_MUX: std_logic;
+  signal Ctrl_MemWrite_MUX : std_logic; 
+  signal Ctrl_MemRead_MUX : std_logic;
+  signal Ctrl_PcLui_MUX : std_logic_vector(1 downto 0);
+  signal Ctrl_jalr_MUX : std_logic; 
+  signal Ctrl_RegWrite_MUX : std_logic;
 
-  signal Ctrl_ALUSrc_MUX: std_logic;
-  signal Ctrl_ALUOP_MUX :  std_logic_vector(2 downto 0);
-  signal flush_IF_ID, flush_ID_EX, flush_EX_MEM: std_logic;
+  signal Ctrl_ALUSrc_MUX : std_logic;
+  signal Ctrl_ALUOP_MUX : std_logic_vector(2 downto 0);
+  signal flush_IF_ID, flush_ID_EX, flush_EX_MEM : std_logic;
 
 
 begin
@@ -211,16 +210,16 @@ begin
     IF_ID_Regs: process(clk,reset)
     begin
       if Reset = '1' then
-        PC_ID <= (others=>'0');
-        instruction_ID <=(others=>'0');
+        PC_ID <= (others => '0');
+        instruction_ID <= (others=>'0');
       elsif rising_edge(clk) then
         if enable_IF_ID = '1' and flush_IF_ID = '0' then 
-          PC_ID<=PC_IF;
-          instruction_ID<=instruccion_IF;
+          PC_ID <= PC_IF;
+          instruction_ID <= instruccion_IF;
 
         elsif flush_IF_ID = '1' then --Flush instruction
-          PC_ID <= (others=>'0');
-          instruction_ID <=(others=>'0');
+          PC_ID <= (others => '0');
+          instruction_ID <= (others=>'0');
         end if;
 
       end if;
@@ -229,7 +228,7 @@ begin
     enable_IF_ID<='1';
     IAddr<=PC_IF;
     PC_IF<= PC_reg; 
-    instruccion_IF <= IDataIn;
+    instruccion_IF<=IDataIn;
 
     PC_plus4    <= PC_reg + 4;
 
