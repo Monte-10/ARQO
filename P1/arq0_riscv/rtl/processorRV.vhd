@@ -369,7 +369,7 @@ begin
     Rd2   => reg_RS2_ID,
     A3    => RD_WB, --Instruction(11 downto 7),,
     Wd3   => reg_RD_data_WB,
-    We3   => Ctrl_RegWrite
+    We3   => Ctrl_RegWrite_WB
   );
 
   UnidadControl : control_unit
