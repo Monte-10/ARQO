@@ -186,24 +186,24 @@ begin
     begin
       if Reset = '1' then
         PC_ID <= (others=>'0');
-        instruction_ID <=(others=>'0');
+        Instruction_ID <=(others=>'0');
       elsif rising_edge(clk) and enable_IF_ID='1' then
         PC_ID<=PC_IF;
-        instruction_ID<=instruccion_IF;
+        Instruction_ID<=Instruccion_IF;
       end if;
     end process;
 
     enable_IF_ID<='1';
     IAddr<=PC_IF;
     PC_IF<=PC_reg;
-    instruction<=IDataIn;
+    Instruction_IF<=IDataIn;
 
   PC_plus4    <= PC_reg + 4;
-  Funct3      <= instruction(14 downto 12); -- Campo "funct3" de la instruccion
-  Funct7      <= instruction(31 downto 25); -- Campo "funct7" de la instruccion
-  RD          <= Instruction(11 downto 7);
-  RS1         <= Instruction(19 downto 15);
-  RS2         <= Instruction(24 downto 20);
+  Funct3_ID    <= Instruction_ID(14 downto 12); -- Campo "funct3" de la instruccion
+  Funct7_ID      <= Instruction_ID(31 downto 25); -- Campo "funct7" de la instruccion
+  RD_ID          <= Instruction_ID(11 downto 7);
+  RS1_ID         <= Instruction_ID(19 downto 15);
+  RS2_ID         <= Instruction_ID(24 downto 20);
 
 -------ID/EX-----------------------------
     ID_EX_Regs: process(clk,reset)
