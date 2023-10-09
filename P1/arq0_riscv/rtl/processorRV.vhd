@@ -322,7 +322,7 @@ begin
   branch_true_MEM    <= '1' when ( ((Funct3_MEM = BR_F3_BEQ) and (Alu_ZERO_MEM = '1')) or
   ((Funct3_MEM = BR_F3_BNE) and (Alu_ZERO_MEM = '0')) or
   ((Funct3_MEM = BR_F3_BLT) and (Alu_SIGN_MEM = '1')) or
-  ((Funct3_MEM = BR_F3_BGT) and (Alu_SIGN_MEM = '0')) ) else '0';
+  ((Funct3_MEM = BR_F3_BGE) and (Alu_SIGN_MEM = '0')) ) else '0';
 
   DWrEn<= Ctrl_MemWrite_MEM;
   dRdEn<= Ctrl_MemRead_MEM;
@@ -363,18 +363,18 @@ begin
   port map (
     Clk   => Clk,
     Reset => Reset,
-    A1    => RS1, --Instruction(19 downto 15), --rs1
-    Rd1   => reg_RS1,
-    A2    => RS2, --Instruction(24 downto 20), --rs2
-    Rd2   => reg_RS2,
-    A3    => RD, --Instruction(11 downto 7),,
-    Wd3   => reg_RD_data,
+    A1    => RS1_ID, --Instruction(19 downto 15), --rs1
+    Rd1   => reg_RS1_ID,
+    A2    => RS2_ID, --Instruction(24 downto 20), --rs2
+    Rd2   => reg_RS2_ID,
+    A3    => RD_WB, --Instruction(11 downto 7),,
+    Wd3   => reg_RD_data_WB,
     We3   => Ctrl_RegWrite
   );
 
   UnidadControl : control_unit
   port map(
-    OpCode   => Instruction(6 downto 0),
+    OpCode   => Instruction_ID(6 downto 0),
     -- Señales para el PC
     Branch   => Ctrl_Branch,
     Ins_Jal  => Ctrl_Jal,
@@ -393,45 +393,29 @@ begin
 
   immed_op : Imm_Gen
   port map (
-        instr    => Instruction,
-        imm      => Imm_ext 
+        instr    => Instruction_ID,
+        imm      => Imm_ext_ID 
   );
 
   Alu_control_i: alu_control
   port map(
     -- Entradas:
-    ALUOp   => Ctrl_ALUOp, -- Codigo de control desde la unidad de control
-    Funct3  => Funct3,    -- Campo "funct3" de la instruccion
-    Funct7  => Funct7,    -- Campo "funct7" de la instruccion
+    ALUOp   => Ctrl_ALUOp_EX, -- Codigo de control desde la unidad de control
+    Funct3  => Funct3_EX,    -- Campo "funct3" de la instruccion
+    Funct7  => Funct7_EX,    -- Campo "funct7" de la instruccion
     -- Salida de control para la ALU:
-    ALUControl => AluControl -- Define operacion a ejecutar por la ALU
+    ALUControl => AluControl_EX -- Define operacion a ejecutar por la ALU
   );
 
   Alu_RISCV : alu_RV
   port map (
-    OpA      => Alu_Op1,
-    OpB      => Alu_Op2,
-    Control  => AluControl,
-    Result   => Alu_Res,
-    Signflag => Alu_SIGN,
+    OpA      => Alu_Op1_EX,
+    OpB      => Alu_Op2_EX,
+    Control  => AluControl_EX,
+    Result   => Alu_Res_EX,
+    Signflag => Alu_SIGN_EX,
     CarryOut => open,
-    Zflag    => Alu_ZERO
+    Zflag    => Alu_ZERO_EX
   );
-
-  Alu_Op1    <= PC_reg           when Ctrl_PcLui = "00" else
-                (others => '0')  when Ctrl_PcLui = "01" else
-                reg_RS1; -- any other 
-  Alu_Op2    <= reg_RS2 when Ctrl_ALUSrc = '0' else Imm_ext;
-
-
-  DAddr      <= Alu_Res;
-  DDataOut   <= reg_RS2;
-  DWrEn      <= Ctrl_MemWrite;
-  DRdEn      <= Ctrl_MemRead;
-  dataIn_Mem <= DDataIn;
-
-  reg_RD_data <= dataIn_Mem when Ctrl_ResSrc = "01" else
-                 PC_plus4   when Ctrl_ResSrc = "10" else 
-                 Alu_Res; -- When 00
 
 end architecture;
