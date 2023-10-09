@@ -1,3 +1,9 @@
+ls
+# Ej1.txt
+# README.md
+# rtl
+# sim
+# transcript
 cd sim
 ls
 # datos.txt
@@ -12,9 +18,10 @@ ls
 # transcript
 # vsim.wlf
 # wave_arq.do
+# work
 do runsim_arq.do
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:04 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -24,10 +31,10 @@ do runsim_arq.do
 # -- Compiling package RISCV_pack
 # -- Compiling package body RISCV_pack
 # -- Loading package RISCV_pack
-# End time: 23:13:04 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:04 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -36,10 +43,10 @@ do runsim_arq.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity reg_bank
 # -- Compiling architecture rtl of reg_bank
-# End time: 23:13:04 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:04 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -49,10 +56,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity alu_RV
 # -- Compiling architecture rtl of alu_RV
-# End time: 23:13:04 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:04 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -62,10 +69,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity alu_control
 # -- Compiling architecture rtl of alu_control
-# End time: 23:13:04 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:04 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -75,10 +82,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity control_unit
 # -- Compiling architecture rtl of control_unit
-# End time: 23:13:05 on Sep 27,2023, Elapsed time: 0:00:01
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:05 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -89,10 +96,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity Imm_Gen
 # -- Compiling architecture rtl of Imm_Gen
-# End time: 23:13:05 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:05 on Sep 27,2023
+# Start time: 18:08:23 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -102,10 +109,50 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity processorRV
 # -- Compiling architecture rtl of processorRV
-# End time: 23:13:05 on Sep 27,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# ** Warning: ../rtl/processorRV.vhd(190): (vcom-1400) Synthesis Warning: Signal "enable_IF_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(191): (vcom-1400) Synthesis Warning: Signal "PC_IF" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(192): (vcom-1400) Synthesis Warning: Signal "Instruction_IF" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(232): (vcom-1400) Synthesis Warning: Signal "enable_ID_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(233): (vcom-1400) Synthesis Warning: Signal "PC_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(234): (vcom-1400) Synthesis Warning: Signal "Funct3_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(235): (vcom-1400) Synthesis Warning: Signal "Funct7_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(236): (vcom-1400) Synthesis Warning: Signal "Imm_ext_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(237): (vcom-1400) Synthesis Warning: Signal "RD_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(239): (vcom-1400) Synthesis Warning: Signal "Ctrl_Branch" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(240): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(241): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemWrite" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(242): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemRead" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(243): (vcom-1400) Synthesis Warning: Signal "Ctrl_PcLui" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(244): (vcom-1400) Synthesis Warning: Signal "Ctrl_Jalr" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(245): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(247): (vcom-1400) Synthesis Warning: Signal "reg_RS1_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(248): (vcom-1400) Synthesis Warning: Signal "reg_RS2_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(250): (vcom-1400) Synthesis Warning: Signal "Ctrl_ALUSrc" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(251): (vcom-1400) Synthesis Warning: Signal "Ctrl_ALUOp" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(293): (vcom-1400) Synthesis Warning: Signal "enable_EX_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(294): (vcom-1400) Synthesis Warning: Signal "Addr_Jump_dest_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(295): (vcom-1400) Synthesis Warning: Signal "Ctrl_Jalr_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(296): (vcom-1400) Synthesis Warning: Signal "Ctrl_Branch_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(298): (vcom-1400) Synthesis Warning: Signal "Alu_ZERO_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(299): (vcom-1400) Synthesis Warning: Signal "Alu_SIGN_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(301): (vcom-1400) Synthesis Warning: Signal "Funct3_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(303): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemWrite_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(304): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemRead_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(306): (vcom-1400) Synthesis Warning: Signal "RD_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(307): (vcom-1400) Synthesis Warning: Signal "reg_RS2_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(308): (vcom-1400) Synthesis Warning: Signal "Alu_Res_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(310): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(311): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(343): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(344): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(345): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(346): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(347): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(348): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
+# End time: 18:08:23 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 40
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:05 on Sep 27,2023
+# Start time: 18:08:24 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit memory_data.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -116,10 +163,10 @@ do runsim_arq.do
 # -- Loading package std_logic_textio
 # -- Compiling entity memory_data
 # -- Compiling architecture Behavioral of memory_data
-# End time: 23:13:05 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:24 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:05 on Sep 27,2023
+# Start time: 18:08:24 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit memory_instr.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -130,10 +177,10 @@ do runsim_arq.do
 # -- Loading package std_logic_textio
 # -- Compiling entity memory_instr
 # -- Compiling architecture Behavioral of memory_instr
-# End time: 23:13:05 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:24 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:13:05 on Sep 27,2023
+# Start time: 18:08:24 on Oct 09,2023
 # vcom -reportprogress 300 -work work -2008 -explicit processorR5_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -142,10 +189,10 @@ do runsim_arq.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity processorRV_tb
 # -- Compiling architecture tb of processorRV_tb
-# End time: 23:13:05 on Sep 27,2023, Elapsed time: 0:00:00
+# End time: 18:08:24 on Oct 09,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" processorRV_tb -gN_CYCLES=150 -gINIT_FILENAME_DATA="datos.txt" -gINIT_FILENAME_INST="instrucciones.txt" 
-# Start time: 23:13:05 on Sep 27,2023
+# Start time: 18:08:24 on Oct 09,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -171,37 +218,431 @@ do runsim_arq.do
 # ** Note: Se ha cargado la memoria 'instrucciones.txt'
 #    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_inst_mem
 # 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Fatal: (vsim-3734) Index value -67125248 is out of range 0 to 2047.
+#    Time: 115 ns  Iteration: 1  Process: /processorrv_tb/i_data_mem/init_mem File: memory_data.vhd
+# Fatal error in Process init_mem at memory_data.vhd line 97
+# 
+# HDL call sequence:
+# Stopped at memory_data.vhd 97 Process init_mem
+# 
+do runsim_arq.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package RISCV_pack
+# -- Compiling package body RISCV_pack
+# -- Loading package RISCV_pack
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity reg_bank
+# -- Compiling architecture rtl of reg_bank
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity alu_RV
+# -- Compiling architecture rtl of alu_RV
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity alu_control
+# -- Compiling architecture rtl of alu_control
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity control_unit
+# -- Compiling architecture rtl of control_unit
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity Imm_Gen
+# -- Compiling architecture rtl of Imm_Gen
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity processorRV
+# -- Compiling architecture rtl of processorRV
+# ** Warning: ../rtl/processorRV.vhd(190): (vcom-1400) Synthesis Warning: Signal "enable_IF_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(191): (vcom-1400) Synthesis Warning: Signal "PC_IF" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(192): (vcom-1400) Synthesis Warning: Signal "Instruction_IF" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(232): (vcom-1400) Synthesis Warning: Signal "enable_ID_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(233): (vcom-1400) Synthesis Warning: Signal "PC_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(234): (vcom-1400) Synthesis Warning: Signal "Funct3_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(235): (vcom-1400) Synthesis Warning: Signal "Funct7_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(236): (vcom-1400) Synthesis Warning: Signal "Imm_ext_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(237): (vcom-1400) Synthesis Warning: Signal "RD_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(239): (vcom-1400) Synthesis Warning: Signal "Ctrl_Branch" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(240): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(241): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemWrite" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(242): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemRead" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(243): (vcom-1400) Synthesis Warning: Signal "Ctrl_PcLui" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(244): (vcom-1400) Synthesis Warning: Signal "Ctrl_Jalr" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(245): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(247): (vcom-1400) Synthesis Warning: Signal "reg_RS1_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(248): (vcom-1400) Synthesis Warning: Signal "reg_RS2_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(250): (vcom-1400) Synthesis Warning: Signal "Ctrl_ALUSrc" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(251): (vcom-1400) Synthesis Warning: Signal "Ctrl_ALUOp" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(293): (vcom-1400) Synthesis Warning: Signal "enable_EX_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(294): (vcom-1400) Synthesis Warning: Signal "Addr_Jump_dest_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(295): (vcom-1400) Synthesis Warning: Signal "Ctrl_Jalr_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(296): (vcom-1400) Synthesis Warning: Signal "Ctrl_Branch_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(298): (vcom-1400) Synthesis Warning: Signal "Alu_ZERO_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(299): (vcom-1400) Synthesis Warning: Signal "Alu_SIGN_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(301): (vcom-1400) Synthesis Warning: Signal "Funct3_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(303): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemWrite_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(304): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemRead_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(306): (vcom-1400) Synthesis Warning: Signal "RD_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(307): (vcom-1400) Synthesis Warning: Signal "reg_RS2_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(308): (vcom-1400) Synthesis Warning: Signal "Alu_Res_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(310): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(311): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(343): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(344): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(345): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(346): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(347): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(348): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 40
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit memory_data.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory_data
+# -- Compiling architecture Behavioral of memory_data
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit memory_instr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory_instr
+# -- Compiling architecture Behavioral of memory_instr
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:21:02 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit processorR5_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity processorRV_tb
+# -- Compiling architecture tb of processorRV_tb
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:21:02 on Oct 09,2023, Elapsed time: 0:12:38
+# Errors: 1, Warnings: 1
+# vsim -voptargs=""+acc"" processorRV_tb -gN_CYCLES=150 -gINIT_FILENAME_DATA="datos.txt" -gINIT_FILENAME_INST="instrucciones.txt" 
+# Start time: 18:21:02 on Oct 09,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.processorrv_tb(tb)
+# Loading work.riscv_pack(body)
+# Loading work.processorrv(rtl)
+# Loading work.reg_bank(rtl)
+# Loading work.control_unit(rtl)
+# Loading ieee.numeric_std(body)
+# Loading work.imm_gen(rtl)
+# Loading work.alu_control(rtl)
+# Loading work.alu_rv(rtl)
+# Loading ieee.std_logic_textio(body)
+# Loading work.memory_instr(behavioral)
+# Loading work.memory_data(behavioral)
+# 1
+# ** Note: COMIENZA LA SIMULACION
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb
+# ** Note: Se ha cargado la memoria 'datos.txt'
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_data_mem
+# ** Note: Se ha cargado la memoria 'instrucciones.txt'
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_inst_mem
+# 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Fatal: (vsim-3734) Index value -67125248 is out of range 0 to 2047.
+#    Time: 115 ns  Iteration: 1  Process: /processorrv_tb/i_data_mem/init_mem File: memory_data.vhd
+# Fatal error in Process init_mem at memory_data.vhd line 97
+# 
+# HDL call sequence:
+# Stopped at memory_data.vhd 97 Process init_mem
+# 
+quit -sim
+# End time: 18:22:28 on Oct 09,2023, Elapsed time: 0:01:26
+# Errors: 1, Warnings: 1
+# Load canceled
+do runsim_arq.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package RISCV_pack
+# -- Compiling package body RISCV_pack
+# -- Loading package RISCV_pack
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity reg_bank
+# -- Compiling architecture rtl of reg_bank
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity alu_RV
+# -- Compiling architecture rtl of alu_RV
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity alu_control
+# -- Compiling architecture rtl of alu_control
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity control_unit
+# -- Compiling architecture rtl of control_unit
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity Imm_Gen
+# -- Compiling architecture rtl of Imm_Gen
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity processorRV
+# -- Compiling architecture rtl of processorRV
+# ** Warning: ../rtl/processorRV.vhd(190): (vcom-1400) Synthesis Warning: Signal "enable_IF_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(191): (vcom-1400) Synthesis Warning: Signal "PC_IF" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(192): (vcom-1400) Synthesis Warning: Signal "Instruction_IF" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(232): (vcom-1400) Synthesis Warning: Signal "enable_ID_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(233): (vcom-1400) Synthesis Warning: Signal "PC_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(234): (vcom-1400) Synthesis Warning: Signal "Funct3_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(235): (vcom-1400) Synthesis Warning: Signal "Funct7_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(236): (vcom-1400) Synthesis Warning: Signal "Imm_ext_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(237): (vcom-1400) Synthesis Warning: Signal "RD_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(239): (vcom-1400) Synthesis Warning: Signal "Ctrl_Branch" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(240): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(241): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemWrite" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(242): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemRead" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(243): (vcom-1400) Synthesis Warning: Signal "Ctrl_PcLui" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(244): (vcom-1400) Synthesis Warning: Signal "Ctrl_Jalr" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(245): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(247): (vcom-1400) Synthesis Warning: Signal "reg_RS1_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(248): (vcom-1400) Synthesis Warning: Signal "reg_RS2_ID" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(250): (vcom-1400) Synthesis Warning: Signal "Ctrl_ALUSrc" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(251): (vcom-1400) Synthesis Warning: Signal "Ctrl_ALUOp" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(293): (vcom-1400) Synthesis Warning: Signal "enable_EX_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(294): (vcom-1400) Synthesis Warning: Signal "Addr_Jump_dest_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(295): (vcom-1400) Synthesis Warning: Signal "Ctrl_Jalr_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(296): (vcom-1400) Synthesis Warning: Signal "Ctrl_Branch_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(298): (vcom-1400) Synthesis Warning: Signal "Alu_ZERO_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(299): (vcom-1400) Synthesis Warning: Signal "Alu_SIGN_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(301): (vcom-1400) Synthesis Warning: Signal "Funct3_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(303): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemWrite_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(304): (vcom-1400) Synthesis Warning: Signal "Ctrl_MemRead_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(306): (vcom-1400) Synthesis Warning: Signal "RD_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(307): (vcom-1400) Synthesis Warning: Signal "reg_RS2_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(308): (vcom-1400) Synthesis Warning: Signal "Alu_Res_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(310): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(311): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_EX" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(343): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(344): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(345): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(346): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(347): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(348): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 40
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit memory_data.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory_data
+# -- Compiling architecture Behavioral of memory_data
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit memory_instr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory_instr
+# -- Compiling architecture Behavioral of memory_instr
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:27:14 on Oct 09,2023
+# vcom -reportprogress 300 -work work -2008 -explicit processorR5_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity processorRV_tb
+# -- Compiling architecture tb of processorRV_tb
+# End time: 18:27:14 on Oct 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" processorRV_tb -gN_CYCLES=150 -gINIT_FILENAME_DATA="datos.txt" -gINIT_FILENAME_INST="instrucciones.txt" 
+# Start time: 18:27:14 on Oct 09,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.processorrv_tb(tb)
+# Loading work.riscv_pack(body)
+# Loading work.processorrv(rtl)
+# Loading work.reg_bank(rtl)
+# Loading work.control_unit(rtl)
+# Loading ieee.numeric_std(body)
+# Loading work.imm_gen(rtl)
+# Loading work.alu_control(rtl)
+# Loading work.alu_rv(rtl)
+# Loading ieee.std_logic_textio(body)
+# Loading work.memory_instr(behavioral)
+# Loading work.memory_data(behavioral)
+# 1
+# ** Note: COMIENZA LA SIMULACION
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb
+# ** Note: Se ha cargado la memoria 'datos.txt'
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_data_mem
+# ** Note: Se ha cargado la memoria 'instrucciones.txt'
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_inst_mem
+# 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
 # ** Note: SIMULACION FINALIZADA. COMPROBAR FORMA DE ONDAS.
 #    Time: 1555 ns  Iteration: 1  Instance: /processorrv_tb
-run -all
-do wave_arq.do
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 18:43:34 on Oct 09,2023, Elapsed time: 0:16:20
+# Errors: 0, Warnings: 1
