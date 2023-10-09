@@ -170,8 +170,6 @@ architecture rtl of processorRV is
 
 begin
 
-  PC_next <= Addr_Jump_dest when decision_Jump = '1' else PC_plus4;
-
   -- Program Counter
   PC_reg_proc: process(Clk, Reset)
   begin
@@ -398,20 +396,6 @@ begin
         instr    => Instruction,
         imm      => Imm_ext 
   );
-
-  Addr_BranchJal <= PC_reg  + Imm_ext;
-  Addr_Jalr      <= reg_RS1 + Imm_ext;
-
-  decision_Jump  <= Ctrl_Jal or Ctrl_Jalr or (Ctrl_Branch and branch_true);
-  branch_true    <= '1' when ( ((Funct3 = BR_F3_BEQ) and (Alu_ZERO = '1')) or
-                               ((Funct3 = BR_F3_BNE) and (Alu_ZERO = '0')) or
-                               ((Funct3 = BR_F3_BLT) and (Alu_SIGN = '1')) or
-                               ((Funct3 = BR_F3_BGE) and (Alu_SIGN = '0')) ) else
-                    '0';
- 
-  Addr_Jump_dest <= Addr_Jalr   when Ctrl_Jalr = '1' else
-                    Addr_BranchJal when (Ctrl_Branch='1') or (Ctrl_Jal='1') else
-                    (others =>'0');
 
   Alu_control_i: alu_control
   port map(
