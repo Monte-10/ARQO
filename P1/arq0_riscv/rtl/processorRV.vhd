@@ -189,7 +189,7 @@ begin
         Instruction_ID <=(others=>'0');
       elsif rising_edge(clk) and enable_IF_ID='1' then
         PC_ID<=PC_IF;
-        Instruction_ID<=Instruccion_IF;
+        Instruction_ID<=Instruction_IF;
       end if;
     end process;
 
@@ -212,7 +212,7 @@ begin
         PC_EX<=(others=>'0');
         Funct3_EX<=(others=>'0');
         Funct7_EX<=(others=>'0');
-        Inm_ext_EX<=(others => '0');
+        Imm_ext_EX<=(others => '0');
         RD_EX<=(others => '0');
 
         Ctrl_Branch_EX<= '0';
@@ -233,7 +233,7 @@ begin
         PC_EX<=PC_ID;
         Funct3_EX<= Funct3_ID;  
         Funct7_EX<= Funct7_ID;
-        Inm_ext_EX<=Inm_ext_ID;
+        Imm_ext_EX<=Imm_ext_ID;
         RD_EX <= RD_ID;
 
         Ctrl_Branch_EX <= Ctrl_Branch;
@@ -254,16 +254,16 @@ begin
 
     enable_ID_EX<='1';
 
-    Addr_Branch_EX    <= PC_EX + Inm_ext_EX;
-    Addr_jalr_EX    <= reg_RS1_EX + Inm_ext_EX;
+    Addr_BranchJal_EX    <= PC_EX + Imm_ext_EX;
+    Addr_jalr_EX    <= reg_RS1_EX + Imm_ext_EX;
 
     Alu_Op1_EX    <= PC_EX  when Ctrl_PcLui_EX = "00" else
                   (others => '0')  when Ctrl_PcLui_EX = "01" else
                   reg_RS1_EX;
-    Alu_Op2_EX   <= reg_RS2_EX when Ctrl_ALUSrc_EX = '0' else Inm_ext_EX;
+    Alu_Op2_EX   <= reg_RS2_EX when Ctrl_ALUSrc_EX = '0' else Imm_ext_EX;
     
     Addr_Jump_dest_EX <= Addr_jalr_EX   when Ctrl_jalr_EX = '1' else
-                      Addr_Branch_EX when Ctrl_Branch_EX='1' else
+                      Addr_BranchJal_EX when Ctrl_Branch_EX='1' else
                       (others =>'0');
 
 
