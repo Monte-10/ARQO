@@ -1,0 +1,15 @@
+add
+addi, 
+and, 
+andi, 
+auipc, 
+beq, 
+bne, 
+j,
+jal, 
+jalr, 
+li, 
+lw, 
+lui, 
+sw, 
+xor

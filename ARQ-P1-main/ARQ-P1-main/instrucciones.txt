@@ -1,0 +1,35 @@
+Address     Code        Basic                        Line Source
+
+0x00400000  0x004e8e93  addi x29,x29,4               19   	addi t4, t4, 4  #t4 = 4
+0x00400004  0x00630313  addi x6,x6,6                 20   	addi t1, t1, 6  #t1 = 6
+0x00400008  0x00738393  addi x7,x7,7                 21   	addi t2, t2, 7  #t2 = 7
+0x0040000c  0x004f0f13  addi x30,x30,4               22   	addi t5, t5, 4	#t5 = 4
+0x00400010  0x01ee8e63  beq x29,x30,0x0000001c       25   	beq t4, t5, target1 #branch effective
+0x00400014  0x0fc10f97  auipc x31,0x0000fc10         26   	lw t6, num4		#register  should not be written because next instructions are flushed 
+0x00400018  0x00cfaf83  lw x31,12(x31)                    
+0x0040001c  0x0fc10317  auipc x6,0x0000fc10          27   	lw t1, num3		#register  should not be written because next instructions are flushed 
+0x00400020  0x00032303  lw x6,0(x6)                       
+0x00400024  0x41d306b3  sub x13,x6,x29               28   	sub a3, t1, t4 	# t1 - t4 = 2	#register  should not be written because next instructions are flushed 
+0x00400028  0x00250613  addi x12,x10,2               29   	addi a2, a0, 2	# a2 = 2	
+0x0040002c  0x0fc10797  auipc x15,0x0000fc10         32   	lw a5, num6
+0x00400030  0xffc7a783  lw x15,0xfffffffc(x15)            
+0x00400034  0x00778c63  beq x15,x7,0x00000018        33   	beq a5, t2, continue #branch effective 
+0x00400038  0x00500693  addi x13,x0,5                34   	addi a3, zero, 5    #register  should not be written because next instructions are flushed 
+0x0040003c  0x00000033  add x0,x0,x0                 35   	add zero, zero, zero
+0x00400040  0x00000033  add x0,x0,x0                 36   	add zero, zero, zero
+0x00400044  0x00000033  add x0,x0,x0                 37   	add zero, zero, zero
+0x00400048  0x00000033  add x0,x0,x0                 38   	add zero, zero, zero
+0x0040004c  0x0fc10517  auipc x10,0x0000fc10         42   	lw a0, num1
+0x00400050  0xfc852503  lw x10,0xffffffc8(x10)            
+0x00400054  0x00358593  addi x11,x11,3               43   	addi a1, a1, 3
+0x00400058  0x02b50263  beq x10,x11,0x00000024       44   	beq a0, a1, failure		#branch not effective
+0x0040005c  0x41e38fb3  sub x31,x7,x30               47   	sub t6, t2, t5
+0x00400060  0x01f50e63  beq x10,x31,0x0000001c       48   	beq a0, t6, failure		#branch not effective
+0x00400064  0x00bf8e63  beq x31,x11,0x0000001c       49   	beq t6, a1, success		#branch effective
+0x00400068  0x00000033  add x0,x0,x0                 50   	add zero, zero, zero 	
+0x0040006c  0x00000033  add x0,x0,x0                 51   	add zero, zero, zero
+0x00400070  0x00000033  add x0,x0,x0                 52   	add zero, zero, zero
+0x00400074  0x00000033  add x0,x0,x0                 53   	add zero, zero, zero
+0x00400078  0x00000033  add x0,x0,x0                 54   	add zero, zero, zero
+0x0040007c  0x00000033  add x0,x0,x0                 56   	add zero, zero, zero	
+0x00400080  0x00000033  add x0,x0,x0                 59   	add zero, zero, zero	
