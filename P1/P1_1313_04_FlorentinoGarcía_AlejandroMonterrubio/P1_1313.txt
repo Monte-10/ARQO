@@ -1,8 +1,0 @@
-Grupo: 1313
-Pareja: 04
-Integrantes:
-  - Florentino García Aznar
-  - Alejandro Monterrubio Navarro
- 
- Aclaraciones:
-  - Se incluyen los directorios rtl/ y sim/ con toda la información para el Ejercicio 3.
