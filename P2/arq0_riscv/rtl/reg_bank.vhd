@@ -51,10 +51,10 @@ begin
    end process;
 
    ------------------------------------------------------
-   -- Lectura as�ncrona de registros (modificado)
+   -- Lectura as�ncrona de registros
    ------------------------------------------------------
-   Rd1 <= Wd3 when ((A1 = A3) and (A1 /= "00000"))  else regs(conv_integer(A1)); 
-   Rd2 <= Wd3 when ((A2 = A3) and (A2 /= "00000"))   else regs(conv_integer(A2));
+   Rd1 <= regs(conv_integer(A1));
+   Rd2 <= regs(conv_integer(A2));
 
 end architecture;
 
