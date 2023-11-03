@@ -205,7 +205,7 @@ begin
     end if;
   end process;
 
-  -------IF/ID-----------------------------
+  -------IF/ID-------
 
     IF_ID_Regs: process(clk,reset)
     begin
@@ -236,7 +236,7 @@ begin
   RS1_ID         <= Instruction_ID(19 downto 15);
   RS2_ID         <= Instruction_ID(24 downto 20);
 
-  -----HAZARD DETECTION UNIT-----------------
+  ----- HDU (HAZARD DETECTION UNIT) -----
 
   --Stall: 1 Continue: 0
   Ctrl_mux_hazard <= '1' when ((Ctrl_MemRead_EX = '1') and ((RD_EX = RS1_ID) or (RD_EX = RS2_ID))) else '0';
@@ -252,14 +252,14 @@ begin
   Ctrl_ALUOP_MUX <= Ctrl_ALUOP when Ctrl_mux_hazard = '0' else (others => '0');
   Ctrl_jal_MUX <= Ctrl_Jal when Ctrl_mux_hazard = '0' else '0';
 
-  --Disable IF/ID pipeline if Stalling
+  --Desactiva el IF/ID pipeline si Stalling
   enable_IF_ID <= '0' when (Ctrl_mux_hazard = '1') else '1';
 
-  --Avoid PC update if stalling
+  --Evita PC se actualice si stalling
   PC_next <= Addr_Jump_dest_MEM when (decision_Jump_MEM = '1') else
               PC_reg when (Ctrl_mux_hazard = '1') else
               PC_plus4;
--------ID/EX-----------------------------
+-------ID/EX-------
     ID_EX_Regs: process(clk,reset)
     begin
       if Reset = '1' then
@@ -352,13 +352,13 @@ begin
     --MUX OP1 ALU inputs
     auxsigalOP1 <= PC_EX  when Ctrl_PcLui_EX = "00" else
     (others => '0')  when Ctrl_PcLui_EX = "01" else
-    reg_RS1_EX; --No forwarding input 
+    reg_RS1_EX;
 
     Alu_Op1_EX <= Alu_Res_MEM when ForwardA = "10" and not (Ctrl_PcLui_EX = "00" or Ctrl_PcLui_EX = "01" ) else
     reg_RD_data_WB when ForwardA = "01" and not (Ctrl_PcLui_EX = "00" or Ctrl_PcLui_EX = "01" ) else
     auxsigalOP1;
     --MUX OP2 ALU INPUT
-    auxsigalOP2   <= reg_RS2_EX when Ctrl_ALUSrc_EX = '0' else Imm_ext_EX; --No forwarding input 
+    auxsigalOP2   <= reg_RS2_EX when Ctrl_ALUSrc_EX = '0' else Imm_ext_EX; 
     
     Alu_Op2_EX <= Alu_Res_MEM when (ForwardB = "10") and (Ctrl_ALUSrc_EX = '0') else
                   reg_RD_data_WB when (ForwardB = "01") and  (Ctrl_ALUSrc_EX = '0') else
@@ -371,14 +371,14 @@ begin
     "01" when ((Ctrl_RegWrite_WB = '1' ) and (RD_WB /=  "00000")  and (RD_WB = Rs1_EX) and not ((Ctrl_RegWrite_MEM = '1') and (RD_MEM /=  "00000") and (RD_MEM =  Rs1_EX))) or
     
     ((Ctrl_Branch_EX = '1' ) and (RD_WB /=  "00000")  and (RD_WB = Rs1_EX) and (Ctrl_RegWrite_WB = '1' )) else --Branch forwarding
-    "00"; --normal input "00"
+    "00";
 
     ForwardB <= "10" when ((Ctrl_RegWrite_MEM = '1') and (RD_MEM /=  "00000")  and (RD_MEM = Rs2_EX)) or
     ((Ctrl_Branch_EX = '1') and (RD_MEM = Rs2_EX ) and (RD_MEM /=  "00000") and (Ctrl_RegWrite_MEM = '1'))  else
     "01" when ( (Ctrl_RegWrite_WB  = '1') and (RD_WB /=  "00000")  and (RD_WB = Rs2_EX) and not ((Ctrl_RegWrite_MEM = '1') and (RD_MEM /=  "00000") and (RD_MEM = Rs2_EX))) or 
     
     ((Ctrl_Branch_EX = '1' ) and (RD_WB /=  "00000")  and (RD_WB = Rs2_EX) and (Ctrl_RegWrite_WB  = '1')) else --Branch forwarding
-    "00"; --normal input  "00"
+    "00";
 
   ------EX/MEM-----------------------------------
   EX_MEM_Regs: process(clk,reset)
@@ -462,12 +462,12 @@ begin
   DAddr<= Alu_Res_MEM;
   dataIn_MEM <= DDataIn;
 
-    --Flush intructions in IF, ID, EX if Branch True
+    --Flush intructions en IF, ID, EX si Branch == True
     flush_IF_ID <= '1' when decision_Jump_MEM = '1' else '0';
     flush_ID_EX <='1' when decision_Jump_MEM = '1' else '0';
     flush_EX_MEM <= '1' when decision_Jump_MEM = '1' else '0';
 
-  ------MEM/WB-----------------------------------
+  ------MEM/WB------
   MEM_WB_Regs: process(clk,reset)
   begin
     if Reset = '1' then

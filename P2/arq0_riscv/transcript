@@ -5,6 +5,183 @@ ls
 # sim
 # transcript
 cd sim
+do runsim_arq.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package RISCV_pack
+# -- Compiling package body RISCV_pack
+# -- Loading package RISCV_pack
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity reg_bank
+# -- Compiling architecture rtl of reg_bank
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity alu_RV
+# -- Compiling architecture rtl of alu_RV
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity alu_control
+# -- Compiling architecture rtl of alu_control
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity control_unit
+# -- Compiling architecture rtl of control_unit
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity Imm_Gen
+# -- Compiling architecture rtl of Imm_Gen
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_pack
+# -- Compiling entity processorRV
+# -- Compiling architecture rtl of processorRV
+# ** Warning: ../rtl/processorRV.vhd(480): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(481): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(482): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(483): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(484): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(485): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit memory_data.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory_data
+# -- Compiling architecture Behavioral of memory_data
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit memory_instr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity memory_instr
+# -- Compiling architecture Behavioral of memory_instr
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:24 on Nov 03,2023
+# vcom -reportprogress 300 -work work -2008 -explicit processorR5_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity processorRV_tb
+# -- Compiling architecture tb of processorRV_tb
+# End time: 21:37:24 on Nov 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" processorRV_tb -gN_CYCLES=150 -gINIT_FILENAME_DATA="datos.txt" -gINIT_FILENAME_INST="instrucciones.txt" 
+# Start time: 21:37:24 on Nov 03,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.processorrv_tb(tb)
+# Loading work.riscv_pack(body)
+# Loading work.processorrv(rtl)
+# Loading work.reg_bank(rtl)
+# Loading work.control_unit(rtl)
+# Loading ieee.numeric_std(body)
+# Loading work.imm_gen(rtl)
+# Loading work.alu_control(rtl)
+# Loading work.alu_rv(rtl)
+# Loading ieee.std_logic_textio(body)
+# Loading work.memory_instr(behavioral)
+# Loading work.memory_data(behavioral)
+# 1
+# ** Note: COMIENZA LA SIMULACION
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb
+# ** Note: Se ha cargado la memoria 'datos.txt'
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_data_mem
+# ** Note: Se ha cargado la memoria 'instrucciones.txt'
+#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_inst_mem
+# 0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 55 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 135 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 205 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 305 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 325 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
+# ** Note: SIMULACION FINALIZADA. COMPROBAR FORMA DE ONDAS.
+#    Time: 1555 ns  Iteration: 1  Instance: /processorrv_tb
 ls
 # datos.txt
 # instrucciones.txt
@@ -21,7 +198,7 @@ ls
 # work
 do runsim_arq.do
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -31,10 +208,10 @@ do runsim_arq.do
 # -- Compiling package RISCV_pack
 # -- Compiling package body RISCV_pack
 # -- Loading package RISCV_pack
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,10 +220,10 @@ do runsim_arq.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity reg_bank
 # -- Compiling architecture rtl of reg_bank
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -56,10 +233,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity alu_RV
 # -- Compiling architecture rtl of alu_RV
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -69,10 +246,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity alu_control
 # -- Compiling architecture rtl of alu_control
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -82,10 +259,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity control_unit
 # -- Compiling architecture rtl of control_unit
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -96,10 +273,10 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity Imm_Gen
 # -- Compiling architecture rtl of Imm_Gen
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:01:14 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -109,128 +286,16 @@ do runsim_arq.do
 # -- Loading package RISCV_pack
 # -- Compiling entity processorRV
 # -- Compiling architecture rtl of processorRV
-# ** Error: ../rtl/processorRV.vhd(361): (vcom-1136) Unknown identifier "reg_RT_EX".
-# ** Error: ../rtl/processorRV.vhd(361): (vcom-1136) Unknown identifier "Inm_ext_EX".
-# ** Error: ../rtl/processorRV.vhd(473): (vcom-1136) Unknown identifier "desition_Jump_MEM".
-# ** Error: ../rtl/processorRV.vhd(473): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
-# ** Error: ../rtl/processorRV.vhd(474): (vcom-1136) Unknown identifier "desition_Jump_MEM".
-# ** Error: ../rtl/processorRV.vhd(474): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
-# ** Error: ../rtl/processorRV.vhd(475): (vcom-1136) Unknown identifier "desition_Jump_MEM".
-# ** Error: ../rtl/processorRV.vhd(475): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
-# ** Warning: ../rtl/processorRV.vhd(487): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(488): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(489): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(490): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(491): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(492): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
-# ** Note: ../rtl/processorRV.vhd(562): VHDL Compiler exiting
-# End time: 18:01:14 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 6
-# ** Error: /home/monte/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
-# Error in macro ./runsim_arq.do line 18
-# /home/monte/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
-#     while executing
-# "vcom -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd"
-do runsim_arq.do
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling package RISCV_pack
-# -- Compiling package body RISCV_pack
-# -- Loading package RISCV_pack
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity reg_bank
-# -- Compiling architecture rtl of reg_bank
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity alu_RV
-# -- Compiling architecture rtl of alu_RV
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity alu_control
-# -- Compiling architecture rtl of alu_control
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity control_unit
-# -- Compiling architecture rtl of control_unit
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity Imm_Gen
-# -- Compiling architecture rtl of Imm_Gen
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity processorRV
-# -- Compiling architecture rtl of processorRV
-# ** Warning: ../rtl/processorRV.vhd(487): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(488): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(489): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(490): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(491): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(492): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
+# ** Warning: ../rtl/processorRV.vhd(480): (vcom-1400) Synthesis Warning: Signal "enable_MEM_WB" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(481): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(482): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(483): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(484): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
+# ** Warning: ../rtl/processorRV.vhd(485): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 6
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit memory_data.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -241,10 +306,10 @@ do runsim_arq.do
 # -- Loading package std_logic_textio
 # -- Compiling entity memory_data
 # -- Compiling architecture Behavioral of memory_data
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit memory_instr.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -255,10 +320,10 @@ do runsim_arq.do
 # -- Loading package std_logic_textio
 # -- Compiling entity memory_instr
 # -- Compiling architecture Behavioral of memory_instr
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:04:17 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # vcom -reportprogress 300 -work work -2008 -explicit processorR5_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -267,222 +332,12 @@ do runsim_arq.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity processorRV_tb
 # -- Compiling architecture tb of processorRV_tb
-# End time: 18:04:17 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" processorRV_tb -gN_CYCLES=150 -gINIT_FILENAME_DATA="datos.txt" -gINIT_FILENAME_INST="instrucciones.txt" 
-# Start time: 18:04:17 on Nov 02,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.processorrv_tb(tb)
-# Loading work.riscv_pack(body)
-# Loading work.processorrv(rtl)
-# Loading work.reg_bank(rtl)
-# Loading work.control_unit(rtl)
-# Loading ieee.numeric_std(body)
-# Loading work.imm_gen(rtl)
-# Loading work.alu_control(rtl)
-# Loading work.alu_rv(rtl)
-# Loading ieee.std_logic_textio(body)
-# Loading work.memory_instr(behavioral)
-# Loading work.memory_data(behavioral)
-# 1
-# ** Note: COMIENZA LA SIMULACION
-#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb
-# ** Note: Se ha cargado la memoria 'datos.txt'
-#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_data_mem
-# ** Note: Se ha cargado la memoria 'instrucciones.txt'
-#    Time: 0 ps  Iteration: 0  Instance: /processorrv_tb/i_inst_mem
-# 0
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 55 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 555 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 605 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 605 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 605 ns  Iteration: 5  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 615 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Note: SIMULACION FINALIZADA. COMPROBAR FORMA DE ONDAS.
-#    Time: 1555 ns  Iteration: 1  Instance: /processorrv_tb
-do runsim_arq.do
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:38 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 ../rtl/RISCV_pack.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling package RISCV_pack
-# -- Compiling package body RISCV_pack
-# -- Loading package RISCV_pack
-# End time: 18:08:38 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:38 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/reg_bank.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity reg_bank
-# -- Compiling architecture rtl of reg_bank
-# End time: 18:08:38 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:38 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_RV.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity alu_RV
-# -- Compiling architecture rtl of alu_RV
-# End time: 18:08:38 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/alu_control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity alu_control
-# -- Compiling architecture rtl of alu_control
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/control_unit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity control_unit
-# -- Compiling architecture rtl of control_unit
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/imm_gen.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity Imm_Gen
-# -- Compiling architecture rtl of Imm_Gen
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit -check_synthesis ../rtl/processorRV.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package RISCV_pack
-# -- Compiling entity processorRV
-# -- Compiling architecture rtl of processorRV
-# ** Warning: ../rtl/processorRV.vhd(488): (vcom-1400) Synthesis Warning: Signal "dataIn_Mem" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(489): (vcom-1400) Synthesis Warning: Signal "Alu_Res_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(490): (vcom-1400) Synthesis Warning: Signal "Ctrl_ResSrc_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(491): (vcom-1400) Synthesis Warning: Signal "Ctrl_RegWrite_MEM" is read in the process but is not in the sensitivity list.
-# ** Warning: ../rtl/processorRV.vhd(492): (vcom-1400) Synthesis Warning: Signal "RD_MEM" is read in the process but is not in the sensitivity list.
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
+# End time: 21:39:31 on Nov 03,2023, Elapsed time: 0:02:07
 # Errors: 0, Warnings: 5
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit memory_data.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Compiling entity memory_data
-# -- Compiling architecture Behavioral of memory_data
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit memory_instr.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package std_logic_textio
-# -- Compiling entity memory_instr
-# -- Compiling architecture Behavioral of memory_instr
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:39 on Nov 02,2023
-# vcom -reportprogress 300 -work work -2008 -explicit processorR5_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity processorRV_tb
-# -- Compiling architecture tb of processorRV_tb
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 18:08:39 on Nov 02,2023, Elapsed time: 0:04:22
-# Errors: 0, Warnings: 22
 # vsim -voptargs=""+acc"" processorRV_tb -gN_CYCLES=150 -gINIT_FILENAME_DATA="datos.txt" -gINIT_FILENAME_INST="instrucciones.txt" 
-# Start time: 18:08:39 on Nov 02,2023
+# Start time: 21:39:31 on Nov 03,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -511,49 +366,8 @@ do runsim_arq.do
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 55 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 555 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 585 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 595 ns  Iteration: 5  Instance: /processorrv_tb/i_inst_mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 605 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 605 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 605 ns  Iteration: 5  Instance: /processorrv_tb/i_processor/Alu_RISCV
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 615 ns  Iteration: 2  Instance: /processorrv_tb/i_processor
+#    Time: 195 ns  Iteration: 3  Instance: /processorrv_tb/i_processor/Alu_RISCV
 # ** Note: SIMULACION FINALIZADA. COMPROBAR FORMA DE ONDAS.
 #    Time: 1555 ns  Iteration: 1  Instance: /processorrv_tb
-# Break key hit
-# End time: 18:23:37 on Nov 02,2023, Elapsed time: 0:14:58
-# Errors: 0, Warnings: 22
+# End time: 21:41:11 on Nov 03,2023, Elapsed time: 0:01:40
+# Errors: 0, Warnings: 2
