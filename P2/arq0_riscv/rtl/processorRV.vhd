@@ -379,11 +379,6 @@ begin
     
     ((Ctrl_Branch_EX = '1' ) and (RD_WB /=  "00000")  and (RD_WB = Rs2_EX) and (Ctrl_RegWrite_WB  = '1')) else --Branch forwarding
     "00"; --normal input  "00"
-    
-    Addr_Jump_dest_EX <= Addr_jalr_EX   when Ctrl_jalr_EX = '1' else
-                      Addr_BranchJal_EX when Ctrl_Branch_EX='1' else
-                      (others =>'0');
-
 
   ------EX/MEM-----------------------------------
   EX_MEM_Regs: process(clk,reset)
@@ -453,8 +448,6 @@ begin
   end process;
 
   enable_EX_MEM<='1';
-
-  PC_next <= Addr_Jump_dest_MEM when decision_Jump_MEM = '1' else PC_plus4;
 
   decision_Jump_MEM  <= Ctrl_Jalr_MEM or (Ctrl_Branch_MEM and branch_true_MEM);
 
